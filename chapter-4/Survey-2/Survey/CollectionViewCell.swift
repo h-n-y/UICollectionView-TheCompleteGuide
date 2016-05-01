@@ -73,29 +73,3 @@ class CollectionViewCell: UICollectionViewCell {
         return selectedBackgroundView
     }
 }
-
-// MARK: - UIView Extension ( Constraints )
-
-extension UIView {
-    
-    /// Constrains `self`'s edges to its superview's edges.
-    func constrainToEdgesOfContainer() {
-        self.constrainToEdgesOfContainerWithInset(0.0)
-    }
-    
-    /// Constrains `self` such that its edges are inset from its `superview`'s edges by `inset`.
-    func constrainToEdgesOfContainerWithInset(inset: CGFloat) {        
-        self.constrainToEdgesOfContainerWithInsets(topBottom: inset, leftRight: inset)
-    }
-     
-    func constrainToEdgesOfContainerWithInsets(topBottom y: CGFloat, leftRight x: CGFloat) {
-        guard let superview = self.superview else { print("View does not have a superview."); return }
-        
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.topAnchor.constraintEqualToAnchor(superview.topAnchor, constant: y).active = true
-        self.bottomAnchor.constraintEqualToAnchor(superview.bottomAnchor, constant: -y).active = true
-        self.leftAnchor.constraintEqualToAnchor(superview.leftAnchor, constant: x).active = true
-        self.rightAnchor.constraintEqualToAnchor(superview.rightAnchor, constant: -x).active = true 
-    }
-}
