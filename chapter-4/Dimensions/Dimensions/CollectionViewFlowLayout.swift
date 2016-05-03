@@ -8,7 +8,6 @@ import UIKit
 @objc protocol CollectionViewDelegateFlowLayout: UICollectionViewDelegateFlowLayout {
     
     optional func collectionView(collectionView: UICollectionView, collectionViewLayout layout: UICollectionViewLayout, layoutModeForItemAtIndexPath indexPath: NSIndexPath) -> CollectionViewFlowLayoutMode
-    optional func hello()
 }
 
 class CollectionViewFlowLayout: UICollectionViewFlowLayout {
