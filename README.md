@@ -1,4 +1,6 @@
 # About 
-This repository contains chapter projects from **iOS UICollectionView: The Complete Guide** by Ash Furrow.
 
-All projects are written in **Swift**.
+**iOS UICollectionView: The Complete Guide** by Ash Furrow uses **Objective-C** throughout.
+
+This repository provides updated **Swift** translations to all the chapter projects.
+
